@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Header } from "@/components/winter/Header";
 import { HeroSection } from "@/components/winter/HeroSection";
 import { ModelsCarousel } from "@/components/winter/ModelsCarousel";
 import { WhatsIncluded } from "@/components/winter/WhatsIncluded";
@@ -72,6 +73,7 @@ const WinterReady = () => {
 
   return (
     <main className="min-h-screen">
+      <Header />
       <HeroSection />
       <ModelsCarousel />
       <WhatsIncluded />
