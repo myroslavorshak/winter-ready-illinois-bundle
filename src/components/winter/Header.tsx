@@ -30,10 +30,20 @@ export const Header = () => {
           </Button>
 
           {/* Book Appointment CTA */}
-          <Button variant="default" size="sm" className="hidden sm:inline-flex">
+          <Button 
+            variant="nissan" 
+            size="sm" 
+            className="hidden sm:inline-flex"
+            onClick={() => window.open('tel:(555)123-4567', '_self')}
+          >
             Book My Appointment
           </Button>
-          <Button variant="default" size="sm" className="sm:hidden">
+          <Button 
+            variant="nissan" 
+            size="sm" 
+            className="sm:hidden"
+            onClick={() => window.open('tel:(555)123-4567', '_self')}
+          >
             Book
           </Button>
         </div>

@@ -55,6 +55,10 @@ export default {
           gray: "hsl(var(--winter-gray))",
           "gray-light": "hsl(var(--winter-gray-light))",
         },
+        nissan: {
+          red: "hsl(var(--nissan-red))",
+          "red-foreground": "hsl(var(--nissan-red-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

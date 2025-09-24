@@ -44,6 +44,10 @@ All colors MUST be HSL.
     --winter-gray: 213 8% 50%;
     --winter-gray-light: 213 8% 95%;
     
+    /* Nissan Brand Colors */
+    --nissan-red: 0 86% 49%;
+    --nissan-red-foreground: 0 0% 100%;
+    
     /* Gradients */
     --gradient-winter: linear-gradient(135deg, hsl(var(--winter-blue)), hsl(var(--winter-blue-dark)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--winter-blue) / 0.95), hsl(var(--winter-blue-dark) / 0.95));
@@ -110,6 +114,10 @@ All colors MUST be HSL.
     --winter-amber: 32 95% 52%;
     --winter-gray: 213 8% 65%;
     --winter-gray-light: 213 25% 15%;
+    
+    /* Nissan Brand Colors - Dark Mode */
+    --nissan-red: 0 86% 59%;
+    --nissan-red-foreground: 0 0% 100%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
