@@ -21,7 +21,7 @@ export const HeroSection = () => {
           Drive into winter
           <span className="block text-winter-amber">fully set</span>
           <span className="block text-3xl md:text-4xl font-normal mt-4">
-            —no extra errands
+            —only at Old Orchard Nissan
           </span>
         </h1>
         
