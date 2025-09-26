@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CalendarIcon, Car, Clock, User } from "lucide-react";
 import { useState } from "react";
 import { format } from "date-fns";
@@ -17,6 +18,15 @@ interface SavingsFormProps {
   totalSavings: number;
   savingsPercentage: number;
 }
+
+// Eligible vehicles for the winter bundle
+const eligibleVehicles = [
+  "2024 Nissan Rogue SV AWD",
+  "2024 Nissan Ariya Engage+", 
+  "2024 Nissan Pathfinder SL AWD",
+  "2024 Nissan Altima 2.5 SV",
+  "Other Nissan Vehicle"
+];
 
 export const SavingsForm = ({ isOpen, onClose, totalSavings, savingsPercentage }: SavingsFormProps) => {
   const [date, setDate] = useState<Date>();
@@ -152,13 +162,18 @@ export const SavingsForm = ({ isOpen, onClose, totalSavings, savingsPercentage }
                 <Car className="h-4 w-4" />
                 Your Nissan Vehicle
               </Label>
-              <Input
-                id="vehicle"
-                type="text"
-                value={formData.vehicle}
-                onChange={(e) => handleInputChange("vehicle", e.target.value)}
-                placeholder="e.g., 2024 Nissan Rogue SV AWD"
-              />
+              <Select value={formData.vehicle} onValueChange={(value) => handleInputChange("vehicle", value)}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select your Nissan model" />
+                </SelectTrigger>
+                <SelectContent className="bg-white z-50">
+                  {eligibleVehicles.map((vehicle) => (
+                    <SelectItem key={vehicle} value={vehicle}>
+                      {vehicle}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">
