@@ -8,9 +8,6 @@ export const ContactSection = () => {
     <section id="contact-section" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <Badge className="bg-winter-amber text-white text-lg px-4 py-2 mb-4">
-            Ready to Reserve?
-          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-winter-blue mb-4">
             Secure Your Winter-Ready Bundle
           </h2>
