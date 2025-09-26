@@ -52,7 +52,7 @@ export const WhyWinterReady = () => {
         
         <Card className="bg-winter-blue text-white shadow-winter">
           <CardContent className="p-8 text-center">
-            <div className="text-winter-amber text-lg font-semibold uppercase tracking-wide mb-4">
+            <div className="text-winter-amber text-xl font-semibold uppercase tracking-wide mb-4">
               Service Department Excellence
             </div>
             <h3 className="text-2xl font-bold mb-4">
