@@ -81,7 +81,7 @@ export const WhatsIncluded = () => {
                 
                 {/* Title positioned over image */}
                 <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <h3 className="text-2xl font-bold text-white drop-shadow-lg group-hover:text-winter-amber transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white drop-shadow-lg group-hover:text-3xl group-hover:drop-shadow-2xl transition-all duration-300">
                     {service.title}
                   </h3>
                 </div>
