@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, MapPin, Clock } from "lucide-react";
+import nissanWinterGift from "@/assets/nissan-winter-gift.jpg";
 
 export const ContactSection = () => {
   return (
@@ -17,16 +18,27 @@ export const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <Card className="shadow-winter">
+          <Card className="shadow-winter overflow-hidden">
+            <div 
+              className="relative h-48 bg-cover bg-center"
+              style={{ backgroundImage: `url(${nissanWinterGift})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-4 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-1">
+                  Claim Your FREE Bundle
+                </h3>
+                <p className="text-sm opacity-90">Complete Winter Protection Included</p>
+              </div>
+            </div>
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-winter-blue mb-6">
-                Claim Your FREE Bundle
-              </h3>
               <div className="space-y-6">
-                <div className="bg-winter-blue-light rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-green-600 mb-2">FREE</div>
-                  <div className="text-winter-gray">Complete Winter Bundle</div>
-                  <div className="text-sm text-winter-amber font-semibold mt-2">Save $553 with eligible purchase!</div>
+                <div className="bg-gradient-to-r from-green-50 to-winter-blue-light rounded-lg p-6 text-center border-2 border-green-200">
+                  <div className="text-4xl font-bold text-green-600 mb-2">FREE</div>
+                  <div className="text-winter-gray font-medium">Complete Winter Bundle</div>
+                  <div className="text-sm text-winter-amber font-semibold mt-2 flex items-center justify-center gap-1">
+                    🎁 Save $553 with eligible purchase!
+                  </div>
                 </div>
                 
                 <Button 
