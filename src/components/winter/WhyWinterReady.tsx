@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import serviceWinterBackground from "@/assets/service-winter-background.jpg";
 
 const stats = [
   {
@@ -50,8 +51,15 @@ export const WhyWinterReady = () => {
           ))}
         </div>
         
-        <Card className="bg-winter-blue text-white shadow-winter">
-          <CardContent className="p-8 text-center">
+        <Card className="bg-winter-blue text-white shadow-winter overflow-hidden relative">
+          {/* Background Image with Fade and Blur */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-20 blur-sm"
+            style={{ backgroundImage: `url(${serviceWinterBackground})` }}
+          />
+          <div className="absolute inset-0 bg-winter-blue/80" />
+          
+          <CardContent className="relative z-10 p-8 text-center">
             <div className="text-winter-amber text-xl font-semibold uppercase tracking-wide mb-4">
               Service Department Excellence
             </div>
