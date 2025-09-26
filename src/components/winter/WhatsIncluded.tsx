@@ -76,12 +76,12 @@ export const WhatsIncluded = () => {
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${service.image})` }}
                 />
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300" />
+                {/* Dark blue overlay for better text readability */}
+                <div className="absolute inset-0 bg-winter-blue/40 group-hover:bg-winter-blue/30 transition-all duration-300" />
                 
                 {/* Title positioned over image */}
                 <div className="absolute bottom-4 left-4 right-4 z-10">
-                  <h3 className="text-2xl font-bold text-white bg-black/60 backdrop-blur-sm px-4 py-3 rounded-lg shadow-lg group-hover:bg-black/70 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-white drop-shadow-lg group-hover:text-winter-amber transition-all duration-300">
                     {service.title}
                   </h3>
                 </div>
