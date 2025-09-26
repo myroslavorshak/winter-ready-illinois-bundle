@@ -9,10 +9,10 @@ export const ContactSection = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-winter-blue mb-4">
-            Secure Your Winter-Ready Bundle
+            Get Your FREE Winter Bundle
           </h2>
           <p className="text-winter-gray text-lg max-w-2xl mx-auto">
-            Limited to first 25 bundles each month. Reserve yours today and drive with confidence all winter long.
+            Complete Winter Protection included at no cost with any eligible Nissan purchase. Save $553 in professional services and accessories.
           </p>
         </div>
 
@@ -20,20 +20,20 @@ export const ContactSection = () => {
           <Card className="shadow-winter">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-winter-blue mb-6">
-                Reserve Your Bundle
+                Claim Your FREE Bundle
               </h3>
               <div className="space-y-6">
                 <div className="bg-winter-blue-light rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-winter-blue mb-2">$299</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">FREE</div>
                   <div className="text-winter-gray">Complete Winter Bundle</div>
-                  <div className="text-sm text-winter-amber font-semibold mt-2">Save $254!</div>
+                  <div className="text-sm text-winter-amber font-semibold mt-2">Save $553 with eligible purchase!</div>
                 </div>
                 
                 <Button 
                   size="lg" 
                   className="w-full bg-winter-amber hover:bg-winter-amber/90 text-white font-semibold text-lg py-6"
                 >
-                  Reserve My Bundle Now
+                  Claim My FREE Bundle Now
                 </Button>
                 
                 <div className="text-center">

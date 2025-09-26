@@ -14,7 +14,7 @@ const savingsData = {
     { name: "Remote Start Setup", individual: 75, bundled: 0 },
     { name: "Emergency Kit", individual: 45, bundled: 0 }
   ],
-  bundlePrice: 299
+  bundlePrice: 0
 };
 
 export const SavingsModule = () => {
@@ -54,8 +54,8 @@ export const SavingsModule = () => {
               </div>
               
               <div className="flex justify-between items-center mb-6">
-                <span className="text-2xl font-bold text-winter-blue">Bundle Price:</span>
-                <span className="text-3xl font-bold text-winter-blue">${savingsData.bundlePrice}</span>
+                <span className="text-2xl font-bold text-winter-blue">Your Price with Eligible Nissan:</span>
+                <span className="text-3xl font-bold text-green-600">FREE</span>
               </div>
               
               <Button 
@@ -65,7 +65,7 @@ export const SavingsModule = () => {
               >
                 <div className="flex flex-col items-center">
                   <div className="text-2xl md:text-3xl font-bold mb-1">Save ${totalSavings}</div>
-                  <div className="text-sm md:text-base">That's {savingsPercentage}% off individual pricing!</div>
+                  <div className="text-sm md:text-base">FREE with any eligible Nissan purchase!</div>
                 </div>
               </Button>
             </div>

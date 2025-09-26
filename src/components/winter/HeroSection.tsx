@@ -26,7 +26,7 @@ export const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 animate-slide-up opacity-90 max-w-2xl mx-auto">
-          Everything your Nissan needs for Illinois winters, bundled together with professional service and guaranteed savings.
+          Complete Winter Protection included FREE with every eligible Nissan purchase. Save $553 in winter essentials and professional service.
         </p>
         
         <Button 
@@ -34,7 +34,7 @@ export const HeroSection = () => {
           size="lg" 
           className="bg-winter-amber hover:bg-winter-amber/90 text-white font-semibold text-lg px-8 py-6 animate-slide-up shadow-winter"
         >
-          Reserve My Bundle Now
+          Claim My FREE Bundle
         </Button>
       </div>
     </section>
