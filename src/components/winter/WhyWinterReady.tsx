@@ -52,9 +52,9 @@ export const WhyWinterReady = () => {
         
         <Card className="bg-winter-blue text-white shadow-winter">
           <CardContent className="p-8 text-center">
-            <Badge className="bg-winter-amber text-white mb-4">
+            <div className="text-winter-amber text-sm font-semibold uppercase tracking-wide mb-4">
               Service Department Excellence
-            </Badge>
+            </div>
             <h3 className="text-2xl font-bold mb-4">
               Certified Nissan Technicians
             </h3>
