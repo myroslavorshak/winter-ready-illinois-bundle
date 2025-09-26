@@ -9,6 +9,7 @@ import { CustomerPhotos } from "@/components/winter/CustomerPhotos";
 import { FAQSection } from "@/components/winter/FAQSection";
 import { TermsSection } from "@/components/winter/TermsSection";
 import { ContactSection } from "@/components/winter/ContactSection";
+import { Footer } from "@/components/winter/Footer";
 import { StickyReserveButton } from "@/components/winter/StickyReserveButton";
 
 const WinterReady = () => {
@@ -83,6 +84,7 @@ const WinterReady = () => {
       <FAQSection />
       <TermsSection />
       <ContactSection />
+      <Footer />
       <StickyReserveButton />
     </main>
   );
