@@ -21,10 +21,10 @@ interface SavingsFormProps {
 
 // Eligible vehicles for the winter bundle
 const eligibleVehicles = [
-  "2024 Nissan Rogue SV AWD",
-  "2024 Nissan Ariya Engage+", 
-  "2024 Nissan Pathfinder SL AWD",
-  "2024 Nissan Altima 2.5 SV",
+  "2025 Nissan Rogue SV AWD",
+  "2025 Nissan Ariya Engage+", 
+  "2025 Nissan Pathfinder SL AWD",
+  "2025 Nissan Altima 2.5 SV",
   "Other Nissan Vehicle"
 ];
 

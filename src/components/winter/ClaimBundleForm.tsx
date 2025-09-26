@@ -27,14 +27,14 @@ interface ClaimBundleFormProps {
 }
 
 const carModels = [
-  { value: "altima-2024", label: "2024 Nissan Altima" },
-  { value: "rogue-2024", label: "2024 Nissan Rogue" },
-  { value: "pathfinder-2024", label: "2024 Nissan Pathfinder" },
-  { value: "ariya-2024", label: "2024 Nissan Ariya" },
-  { value: "sentra-2024", label: "2024 Nissan Sentra" },
-  { value: "murano-2024", label: "2024 Nissan Murano" },
-  { value: "frontier-2024", label: "2024 Nissan Frontier" },
-  { value: "titan-2024", label: "2024 Nissan Titan" }
+  { value: "altima-2025", label: "2025 Nissan Altima" },
+  { value: "rogue-2025", label: "2025 Nissan Rogue" },
+  { value: "pathfinder-2025", label: "2025 Nissan Pathfinder" },
+  { value: "ariya-2025", label: "2025 Nissan Ariya" },
+  { value: "sentra-2025", label: "2025 Nissan Sentra" },
+  { value: "murano-2025", label: "2025 Nissan Murano" },
+  { value: "frontier-2025", label: "2025 Nissan Frontier" },
+  { value: "titan-2025", label: "2025 Nissan Titan" }
 ];
 
 export const ClaimBundleForm = ({ isOpen, onClose }: ClaimBundleFormProps) => {

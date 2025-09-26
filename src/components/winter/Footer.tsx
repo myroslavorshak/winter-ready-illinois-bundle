@@ -37,7 +37,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-winter-amber">Winter Bundle Terms</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>• Valid with eligible 2024 Nissan purchase</li>
+              <li>• Valid with eligible 2025 Nissan purchase</li>
               <li>• Limited to first 25 bundles monthly</li>
               <li>• Services must be completed within 60 days</li>
               <li>• Subject to parts availability</li>
@@ -57,7 +57,7 @@ export const Footer = () => {
                 <div>
                   <h5 className="font-medium mb-2 text-white">Bundle Offer Terms:</h5>
                   <p className="mb-3">
-                    Winter-Ready Bundle offer valid only with the purchase or lease of select new 2024 Nissan vehicles. 
+                    Winter-Ready Bundle offer valid only with the purchase or lease of select new 2025 Nissan vehicles. 
                     Bundle includes all-weather floor mats, winter prep service, two tire rotations, alignment check, 
                     remote start setup, and emergency kit (total retail value $553). Offer limited to first 25 bundles 
                     per calendar month. Cannot be combined with other service offers. Services must be completed within 
@@ -169,7 +169,7 @@ export const Footer = () => {
         {/* Copyright and Final Legal */}
         <div className="text-center text-xs text-gray-400 space-y-2">
           <p>
-            © 2024 Old Orchard Nissan. All rights reserved. Nissan, the Nissan logo, and all Nissan model names 
+            © 2025 Old Orchard Nissan. All rights reserved. Nissan, the Nissan logo, and all Nissan model names 
             are trademarks of Nissan Motor Co., Ltd.
           </p>
           <p>
