@@ -161,85 +161,89 @@ export const ScheduleCallForm = ({ isOpen, onClose }: ScheduleCallFormProps) => 
             </div>
           </div>
 
-          <div>
-            <Label htmlFor="email">Email Address *</Label>
-            <Input
-              id="email"
-              type="email"
-              {...register("email")}
-              className="mt-1"
-              placeholder="john.smith@email.com"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-            )}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="email">Email Address *</Label>
+              <Input
+                id="email"
+                type="email"
+                {...register("email")}
+                className="mt-1"
+                placeholder="john.smith@email.com"
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              )}
+            </div>
+
+            <div>
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                {...register("phone")}
+                className="mt-1"
+                placeholder="(555) 123-4567"
+              />
+              {errors.phone && (
+                <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+              )}
+            </div>
           </div>
 
-          <div>
-            <Label htmlFor="phone">Phone Number *</Label>
-            <Input
-              id="phone"
-              type="tel"
-              {...register("phone")}
-              className="mt-1"
-              placeholder="(555) 123-4567"
-            />
-            {errors.phone && (
-              <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-            )}
-          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label>Preferred Call Date *</Label>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full mt-1 justify-start text-left font-normal",
+                      !selectedDate && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0 bg-white z-50" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={selectedDate}
+                    onSelect={handleDateSelect}
+                    disabled={isDateDisabled}
+                    initialFocus
+                    className={cn("p-3 pointer-events-auto")}
+                  />
+                </PopoverContent>
+              </Popover>
+              {errors.preferredDate && (
+                <p className="text-red-500 text-sm mt-1">{errors.preferredDate.message}</p>
+              )}
+            </div>
 
-          <div>
-            <Label>Preferred Call Date *</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  className={cn(
-                    "w-full mt-1 justify-start text-left font-normal",
-                    !selectedDate && "text-muted-foreground"
-                  )}
-                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0 bg-white z-50" align="start">
-                <Calendar
-                  mode="single"
-                  selected={selectedDate}
-                  onSelect={handleDateSelect}
-                  disabled={isDateDisabled}
-                  initialFocus
-                  className={cn("p-3 pointer-events-auto")}
-                />
-              </PopoverContent>
-            </Popover>
-            {errors.preferredDate && (
-              <p className="text-red-500 text-sm mt-1">{errors.preferredDate.message}</p>
-            )}
-          </div>
-
-          <div>
-            <Label htmlFor="preferredTime">Preferred Call Time *</Label>
-            <Select
-              value={preferredTime}
-              onValueChange={(value) => setValue("preferredTime", value)}
-            >
-              <SelectTrigger className="mt-1 bg-white z-50">
-                <SelectValue placeholder="Choose your preferred time" />
-              </SelectTrigger>
-              <SelectContent className="bg-white z-50 max-h-48">
-                {timeSlots.map((slot) => (
-                  <SelectItem key={slot.value} value={slot.value}>
-                    {slot.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            {errors.preferredTime && (
-              <p className="text-red-500 text-sm mt-1">{errors.preferredTime.message}</p>
-            )}
+            <div>
+              <Label htmlFor="preferredTime">Preferred Call Time *</Label>
+              <Select
+                value={preferredTime}
+                onValueChange={(value) => setValue("preferredTime", value)}
+              >
+                <SelectTrigger className="mt-1 bg-white z-50">
+                  <SelectValue placeholder="Choose your preferred time" />
+                </SelectTrigger>
+                <SelectContent className="bg-white z-50 max-h-48">
+                  {timeSlots.map((slot) => (
+                    <SelectItem key={slot.value} value={slot.value}>
+                      {slot.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              {errors.preferredTime && (
+                <p className="text-red-500 text-sm mt-1">{errors.preferredTime.message}</p>
+              )}
+            </div>
           </div>
 
           <div>
