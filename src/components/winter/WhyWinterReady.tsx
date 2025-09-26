@@ -4,14 +4,14 @@ import serviceWinterBackground from "@/assets/service-winter-background.jpg";
 
 const stats = [
   {
-    stat: "40%",
-    label: "Longer braking distance on snow",
-    impact: "Winter tires & alignment matter"
+    stat: "30 ft",
+    label: "Shorter stopping distance with winter tires",
+    impact: "At 30 mph vs. all-season in snow/ice conditions"
   },
   {
-    stat: "25°F",
-    label: "Battery power loss in cold",
-    impact: "Professional testing prevents failure"
+    stat: "35%",
+    label: "Battery power loss at 32°F",
+    impact: "Up to 60% loss at 0°F—critical for Illinois winters"
   },
   {
     stat: "15%",
