@@ -14,7 +14,43 @@ export const TermsSection = () => {
           </p>
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <Card className="shadow-card">
+            <CardContent className="p-8">
+              <Badge className="bg-winter-blue text-white mb-4">
+                Service & Satisfaction
+              </Badge>
+              <h3 className="text-xl font-bold text-winter-blue mb-4">
+                Service & Satisfaction Promise
+              </h3>
+              <ul className="space-y-3 text-winter-gray">
+                <li>✓ All work performed by certified Nissan technicians</li>
+                <li>✓ Genuine Nissan parts and accessories</li>
+                <li>✓ 30-day satisfaction guarantee on all services</li>
+                <li>✓ Digital inspection reports provided</li>
+                <li>✓ Workmanship warranty included</li>
+              </ul>
+            </CardContent>
+          </Card>
 
+          <Card className="shadow-card">
+            <CardContent className="p-8">
+              <Badge className="bg-winter-amber text-white mb-4">
+                Terms & Conditions
+              </Badge>
+              <h3 className="text-xl font-bold text-winter-blue mb-4">
+                Flexible & Fair Terms
+              </h3>
+              <ul className="space-y-3 text-winter-gray">
+                <li>✓ Substitutions of equal/greater value when needed</li>
+                <li>✓ Remote start limited to compatible trims</li>
+                <li>✓ Emergency kits available while supplies last</li>
+                <li>✓ Limited to first 25 bundles per month</li>
+                <li>✓ 7-day cancellation policy (before service)</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
         <Card className="bg-winter-blue text-white shadow-winter">
           <CardContent className="p-8">
             <h3 className="text-2xl font-bold mb-6 text-center">
