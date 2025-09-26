@@ -92,8 +92,8 @@ export const WhatsIncluded = () => {
               
               {/* Bottom Section - Description with Dark Blue Background */}
               <CardContent className="p-0">
-                <div className="bg-winter-blue text-white p-6 group-hover:bg-winter-blue/90 transition-all duration-300">
-                  <p className="leading-relaxed text-center text-white/90 group-hover:text-white transition-all duration-300">
+                <div className="bg-white text-winter-blue p-6 group-hover:bg-gray-50 transition-all duration-300 border-t border-gray-100">
+                  <p className="leading-relaxed text-center text-winter-blue group-hover:text-winter-blue/90 transition-all duration-300">
                     {service.description}
                   </p>
                 </div>
