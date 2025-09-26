@@ -7,37 +7,49 @@ import {
   Shield 
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import rogueImage from "@/assets/rogue-winter.jpg";
+import ariyaImage from "@/assets/ariya-winter.jpg";
+import pathfinderImage from "@/assets/pathfinder-winter.jpg";
+import altimaImage from "@/assets/altima-winter.jpg";
+import customerImage1 from "@/assets/customer-winter-1.jpg";
+import customerImage2 from "@/assets/customer-winter-2.jpg";
 
 const services = [
   {
     icon: Car,
     title: "All-Weather Mats",
-    description: "Model-specific floor protection designed for Illinois weather conditions"
+    description: "Model-specific floor protection designed for Illinois weather conditions",
+    image: rogueImage
   },
   {
     icon: Snowflake,
     title: "Winter Prep Service",
-    description: "Complete battery test, fluid check, and tire pressure optimization"
+    description: "Complete battery test, fluid check, and tire pressure optimization",
+    image: ariyaImage
   },
   {
     icon: RotateCcw,
     title: "2 Tire Rotations",
-    description: "Professional rotation service to maximize tire life through winter months"
+    description: "Professional rotation service to maximize tire life through winter months",
+    image: pathfinderImage
   },
   {
     icon: AlignStartVertical,
     title: "Alignment Check",
-    description: "Precision alignment inspection and adjustment for optimal winter handling"
+    description: "Precision alignment inspection and adjustment for optimal winter handling",
+    image: altimaImage
   },
   {
     icon: Smartphone,
     title: "Remote Start Setup",
-    description: "App activation and training for compatible trims (warm up before you step out)"
+    description: "App activation and training for compatible trims (warm up before you step out)",
+    image: customerImage1
   },
   {
     icon: Shield,
     title: "Emergency Kit",
-    description: "Compact winter emergency kit including essentials for roadside situations"
+    description: "Compact winter emergency kit including essentials for roadside situations",
+    image: customerImage2
   }
 ];
 
@@ -56,17 +68,35 @@ export const WhatsIncluded = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="border-2 hover:border-winter-blue/30 transition-all duration-300 group shadow-card">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-winter-blue-light rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-winter-blue group-hover:text-white transition-all duration-300">
-                  <service.icon size={32} />
+            <Card key={service.title} className="overflow-hidden border-2 hover:border-winter-blue/30 transition-all duration-300 group shadow-card">
+              {/* Top Section - Image with Icon and Title */}
+              <div className="relative h-48 overflow-hidden">
+                {/* Background Image with Fade */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
+                {/* Fade to White Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/90" />
+                
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-6">
+                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-winter-blue group-hover:text-white transition-all duration-300 shadow-lg">
+                    <service.icon size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-winter-blue bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm">
+                    {service.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-winter-blue mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-winter-gray leading-relaxed">
-                  {service.description}
-                </p>
+              </div>
+              
+              {/* Bottom Section - Description with Different Background */}
+              <CardContent className="p-0">
+                <div className="bg-gradient-to-br from-winter-gray-light to-winter-blue-light/10 p-6">
+                  <p className="text-winter-gray leading-relaxed text-center">
+                    {service.description}
+                  </p>
+                </div>
               </CardContent>
             </Card>
           ))}
