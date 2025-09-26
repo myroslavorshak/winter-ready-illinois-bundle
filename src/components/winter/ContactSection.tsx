@@ -1,10 +1,16 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Phone, MapPin, Clock } from "lucide-react";
 import nissanWinterGift from "@/assets/nissan-winter-gift.jpg";
+import { ClaimBundleForm } from "./ClaimBundleForm";
+import { ScheduleCallForm } from "./ScheduleCallForm";
 
 export const ContactSection = () => {
+  const [isClaimFormOpen, setIsClaimFormOpen] = useState(false);
+  const [isScheduleFormOpen, setIsScheduleFormOpen] = useState(false);
+
   return (
     <section id="contact-section" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
@@ -44,12 +50,18 @@ export const ContactSection = () => {
                 <Button 
                   size="lg" 
                   className="w-full bg-winter-amber hover:bg-winter-amber/90 text-white font-semibold text-lg py-6"
+                  onClick={() => setIsClaimFormOpen(true)}
                 >
                   Claim My FREE Bundle Now
                 </Button>
                 
                 <div className="text-center">
-                  <Button variant="outline" size="lg" className="border-winter-blue text-winter-blue hover:bg-winter-blue hover:text-white">
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="border-winter-blue text-winter-blue hover:bg-winter-blue hover:text-white"
+                    onClick={() => setIsScheduleFormOpen(true)}
+                  >
                     Schedule Service Call
                   </Button>
                 </div>
@@ -111,6 +123,16 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
+
+      <ClaimBundleForm 
+        isOpen={isClaimFormOpen}
+        onClose={() => setIsClaimFormOpen(false)}
+      />
+      
+      <ScheduleCallForm 
+        isOpen={isScheduleFormOpen}
+        onClose={() => setIsScheduleFormOpen(false)}
+      />
     </section>
   );
 };
