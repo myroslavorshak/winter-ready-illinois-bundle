@@ -68,32 +68,32 @@ export const WhatsIncluded = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="overflow-hidden border-2 hover:border-winter-blue/30 transition-all duration-300 group shadow-card">
+            <Card key={service.title} className="overflow-hidden border-2 hover:border-winter-blue/30 transition-all duration-300 group shadow-card hover:shadow-winter hover:-translate-y-2 animate-fade-in">
               {/* Top Section - Image with Icon and Title */}
               <div className="relative h-48 overflow-hidden">
                 {/* Background Image with Fade */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                   style={{ backgroundImage: `url(${service.image})` }}
                 />
                 {/* Fade to White Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/90 group-hover:from-transparent group-hover:via-white/30 group-hover:to-white/95 transition-all duration-300" />
                 
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-6">
-                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-winter-blue group-hover:text-white transition-all duration-300 shadow-lg">
+                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 group-hover:bg-winter-amber group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <service.icon size={32} />
                   </div>
-                  <h3 className="text-xl font-bold text-winter-blue bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-winter-blue bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm group-hover:bg-white/90 transition-all duration-300">
                     {service.title}
                   </h3>
                 </div>
               </div>
               
-              {/* Bottom Section - Description with Different Background */}
+              {/* Bottom Section - Description with Dark Blue Background */}
               <CardContent className="p-0">
-                <div className="bg-gradient-to-br from-winter-gray-light to-winter-blue-light/10 p-6">
-                  <p className="text-winter-gray leading-relaxed text-center">
+                <div className="bg-winter-blue text-white p-6 group-hover:bg-winter-blue/90 transition-all duration-300">
+                  <p className="leading-relaxed text-center text-white/90 group-hover:text-white transition-all duration-300">
                     {service.description}
                   </p>
                 </div>
