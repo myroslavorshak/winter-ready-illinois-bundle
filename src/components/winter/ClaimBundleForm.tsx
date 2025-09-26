@@ -86,7 +86,7 @@ export const ClaimBundleForm = ({ isOpen, onClose }: ClaimBundleFormProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-winter-blue">
             Claim Your FREE Winter Bundle
@@ -189,17 +189,6 @@ export const ClaimBundleForm = ({ isOpen, onClose }: ClaimBundleFormProps) => {
             )}
           </div>
 
-          <div className="bg-winter-blue-light p-4 rounded-lg">
-            <h4 className="font-semibold text-winter-blue mb-2">Your FREE Bundle Includes:</h4>
-            <ul className="text-sm text-winter-gray space-y-1">
-              <li>✓ All-Weather Floor Mats ($129 value)</li>
-              <li>✓ Complete Winter Prep Service ($89 value)</li>
-              <li>✓ 2 Tire Rotations ($120 value)</li>
-              <li>✓ Alignment Check ($95 value)</li>
-              <li>✓ Remote Start Setup ($75 value)</li>
-              <li>✓ Emergency Winter Kit ($45 value)</li>
-            </ul>
-          </div>
 
           <div className="flex space-x-3 pt-4">
             <Button

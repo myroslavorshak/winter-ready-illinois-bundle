@@ -122,7 +122,7 @@ export const ScheduleCallForm = ({ isOpen, onClose }: ScheduleCallFormProps) => 
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-winter-blue">
             Schedule Service Call
