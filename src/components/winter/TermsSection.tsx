@@ -17,9 +17,6 @@ export const TermsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Card className="shadow-card">
             <CardContent className="p-8">
-              <Badge className="bg-winter-blue text-white mb-4">
-                Service & Satisfaction
-              </Badge>
               <h3 className="text-xl font-bold text-winter-blue mb-4">
                 Service & Satisfaction Promise
               </h3>
@@ -35,9 +32,6 @@ export const TermsSection = () => {
 
           <Card className="shadow-card">
             <CardContent className="p-8">
-              <Badge className="bg-winter-amber text-white mb-4">
-                Terms & Conditions
-              </Badge>
               <h3 className="text-xl font-bold text-winter-blue mb-4">
                 Flexible & Fair Terms
               </h3>
