@@ -7,49 +7,49 @@ import {
   Shield 
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import rogueImage from "@/assets/rogue-winter.jpg";
-import ariyaImage from "@/assets/ariya-winter.jpg";
-import pathfinderImage from "@/assets/pathfinder-winter.jpg";
-import altimaImage from "@/assets/altima-winter.jpg";
-import customerImage1 from "@/assets/customer-winter-1.jpg";
-import customerImage2 from "@/assets/customer-winter-2.jpg";
+import allWeatherMatsImage from "@/assets/all-weather-mats.jpg";
+import winterPrepImage from "@/assets/winter-prep-service.jpg";
+import tireRotationImage from "@/assets/tire-rotation.jpg";
+import alignmentCheckImage from "@/assets/alignment-check.jpg";
+import remoteStartImage from "@/assets/remote-start-app.jpg";
+import emergencyKitImage from "@/assets/emergency-kit.jpg";
 
 const services = [
   {
     icon: Car,
     title: "All-Weather Mats",
     description: "Model-specific floor protection designed for Illinois weather conditions",
-    image: rogueImage
+    image: allWeatherMatsImage
   },
   {
     icon: Snowflake,
     title: "Winter Prep Service",
     description: "Complete battery test, fluid check, and tire pressure optimization",
-    image: ariyaImage
+    image: winterPrepImage
   },
   {
     icon: RotateCcw,
     title: "2 Tire Rotations",
     description: "Professional rotation service to maximize tire life through winter months",
-    image: pathfinderImage
+    image: tireRotationImage
   },
   {
     icon: AlignStartVertical,
     title: "Alignment Check",
     description: "Precision alignment inspection and adjustment for optimal winter handling",
-    image: altimaImage
+    image: alignmentCheckImage
   },
   {
     icon: Smartphone,
     title: "Remote Start Setup",
     description: "App activation and training for compatible trims (warm up before you step out)",
-    image: customerImage1
+    image: remoteStartImage
   },
   {
     icon: Shield,
     title: "Emergency Kit",
     description: "Compact winter emergency kit including essentials for roadside situations",
-    image: customerImage2
+    image: emergencyKitImage
   }
 ];
 
