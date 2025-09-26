@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { SavingsForm } from "./SavingsForm";
 
 // Configurable savings data
 const savingsData = {
@@ -15,11 +18,14 @@ const savingsData = {
 };
 
 export const SavingsModule = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const totalIndividual = savingsData.services.reduce((sum, service) => sum + service.individual, 0);
   const totalSavings = totalIndividual - savingsData.bundlePrice;
+  const savingsPercentage = Math.round((totalSavings / totalIndividual) * 100);
 
   return (
-    <section className="py-16 bg-winter-blue-light">
+    <>
+      <section className="py-16 bg-winter-blue-light">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-winter-blue mb-4">
@@ -52,14 +58,28 @@ export const SavingsModule = () => {
                 <span className="text-3xl font-bold text-winter-blue">${savingsData.bundlePrice}</span>
               </div>
               
-              <div className="text-center bg-winter-amber text-white rounded-lg p-6">
-                <div className="text-3xl font-bold mb-2">Save ${totalSavings}</div>
-                <div className="text-lg">That's {Math.round((totalSavings / totalIndividual) * 100)}% off individual pricing!</div>
-              </div>
+              <Button 
+                onClick={() => setIsFormOpen(true)}
+                className="w-full bg-winter-amber hover:bg-winter-amber/90 text-white rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105"
+                size="lg"
+              >
+                <div>
+                  <div className="text-3xl font-bold mb-2">Save ${totalSavings}</div>
+                  <div className="text-lg">That's {savingsPercentage}% off individual pricing!</div>
+                </div>
+              </Button>
             </div>
           </CardContent>
         </Card>
       </div>
     </section>
+
+    <SavingsForm 
+      isOpen={isFormOpen}
+      onClose={() => setIsFormOpen(false)}
+      totalSavings={totalSavings}
+      savingsPercentage={savingsPercentage}
+    />
+  </>
   );
 };
