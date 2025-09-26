@@ -60,12 +60,12 @@ export const SavingsModule = () => {
               
               <Button 
                 onClick={() => setIsFormOpen(true)}
-                className="w-full bg-winter-amber hover:bg-winter-amber/90 text-white rounded-lg p-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105"
+                className="w-full bg-winter-amber hover:bg-winter-amber/90 text-white rounded-lg py-8 px-6 text-center transition-all duration-300 hover:shadow-lg hover:scale-105 h-auto"
                 size="lg"
               >
-                <div>
-                  <div className="text-3xl font-bold mb-2">Save ${totalSavings}</div>
-                  <div className="text-lg">That's {savingsPercentage}% off individual pricing!</div>
+                <div className="flex flex-col items-center">
+                  <div className="text-2xl md:text-3xl font-bold mb-1">Save ${totalSavings}</div>
+                  <div className="text-sm md:text-base">That's {savingsPercentage}% off individual pricing!</div>
                 </div>
               </Button>
             </div>
